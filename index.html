@@ -40,8 +40,25 @@
         </div>
     </main>
     <footer>
-        <button id="export-btn">Export to JSON</button>
+        <div id="footer-left">
+            <div id="weather-container">
+                <h3>Weather Forecast</h3>
+                <div id="weather-info">
+                    <img id="weather-icon" src="" alt="Weather Icon">
+                    <p id="weather-description"></p>
+                    <p id="weather-temperature"></p>
+                </div>
+            </div>
+            <div id="utc-container">
+                <h3>Current UTC Time</h3>
+                <p id="utc-time"></p>
+            </div>
+        </div>
+        <div id="footer-right">
+            <button id="export-btn">Export to JSON</button>
+        </div>
     </footer>
+    <script src="script.js"></script>
     <script src="app.js"></script>
 </body>
 
