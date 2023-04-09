@@ -172,3 +172,70 @@ function copyCodeToClipboard(code) {
     document.body.removeChild(textarea);
     alert('Code copied to clipboard!');
 }
+// Edit Snippet
+function editSnippet(snippetIndex) {
+    const snippet = snippets[snippetIndex];
+    document.getElementById('snippet-form-title').textContent = 'Edit Snippet';
+    document.getElementById('snippet-title').value = snippet.title;
+    document.getElementById('snippet-language').value = snippet.language;
+    document.getElementById('snippet-code').value = snippet.code;
+    document.getElementById('snippet-tags').value = snippet.tags.join(', ');
+    document.getElementById('snippet-form').classList.add('edit-mode');
+    document.getElementById('snippet-form').dataset.snippetIndex = snippetIndex;
+}
+
+// Update Snippet
+function updateSnippet(snippetIndex) {
+    const snippet = snippets[snippetIndex];
+    const titleInput = document.getElementById('snippet-title').value;
+    const languageInput = document.getElementById('snippet-language').value;
+    const codeInput = document.getElementById('snippet-code').value;
+    const tagsInput = document.getElementById('snippet-tags').value.split(',').map(tag => tag.trim());
+
+    snippet.title = titleInput;
+    snippet.language = languageInput;
+    snippet.code = codeInput;
+    snippet.tags = tagsInput;
+    snippet.dateModified = new Date().toISOString();
+
+    saveToLocalStorage();
+    resetSnippetForm();
+    renderSnippetList(snippets);
+}
+// Confirm before Updating Snippet
+function confirmUpdateSnippet(snippetIndex) {
+    const snippet = snippets[snippetIndex];
+    const confirmUpdate = confirm(`Are you sure you want to update the snippet "${snippet.title}"?`);
+    if (confirmUpdate) {
+        updateSnippet(snippetIndex);
+    }
+}
+// Display Snippets by Page
+function displaySnippetsByPage(page) {
+    const snippetsPerPage = 5;
+    const startIndex = (page - 1) * snippetsPerPage;
+    const endIndex = startIndex + snippetsPerPage;
+    const snippetsToDisplay = snippets.slice(startIndex, endIndex);
+    renderSnippetList(snippetsToDisplay);
+}
+
+// Add Event Listener for Pagination Buttons
+document.getElementById('pagination-prev').addEventListener('click', () => {
+    currentPage--;
+    displaySnippetsByPage(currentPage);
+});
+
+document.getElementById('pagination-next').addEventListener('click', () => {
+    currentPage++;
+    displaySnippetsByPage(currentPage);
+});
+// Export Snippets to JSON
+function exportSnippetsToJson() {
+    const snippetsJson = JSON.stringify(snippets);
+    const blob = new Blob([snippetsJson], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'snippets.json';
+    a.click();
+}

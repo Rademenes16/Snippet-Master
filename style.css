@@ -58,44 +58,64 @@ main {
 
 /* Style for Search Input */
 #search-input {
-  width: 100%;
-  padding: 0.5rem;
-  border-radius: 5px;
-  border: 1px solid #dee2e6;
-  margin-bottom: 1rem;
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #dee2e6;
+    margin-bottom: 1rem;
 }
 
 /* Style for Sort Select */
 #sort-select {
-  padding: 0.5rem;
-  border-radius: 5px;
-  border: 1px solid #dee2e6;
-  margin-bottom: 1rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #dee2e6;
+    margin-bottom: 1rem;
 }
 
 /* Style for Copy Button */
 .copy-btn {
-  cursor: pointer;
-  margin-left: 0.5rem;
-  color: #007bff;
+    cursor: pointer;
+    margin-left: 0.5rem;
+    color: #007bff;
 }
 
 /* Style for Confirmation Dialog */
 .confirm-dialog {
-  display: none;
-  background-color: #fff;
-  border-radius: 5px;
-  padding: 1rem;
-  max-width: 300px;
-  margin: 10% auto;
-  text-align: center;
+    display: none;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 1rem;
+    max-width: 300px;
+    margin: 10% auto;
+    text-align: center;
 }
 
 .confirm-dialog h4 {
-  margin-top: 0;
-  margin-bottom: 1rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
 }
 
 .confirm-dialog button {
-  margin-top: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+/* Style for Edit and Delete Buttons */
+.snippet-actions button {
+    cursor: pointer;
+    margin-left: 0.5rem;
+    color: #007bff;
+}
+
+/* Style for Pagination Buttons */
+#pagination-prev,
+#pagination-next {
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+/* Style for Export Button */
+.export-btn {
+    cursor: pointer;
+    margin-top: 1rem;
 }
