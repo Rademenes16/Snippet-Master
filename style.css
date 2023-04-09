@@ -54,3 +54,48 @@ main {
     background-color: #fff;
     margin: 10% auto;
     padding: 1rem
+}
+
+/* Style for Search Input */
+#search-input {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #dee2e6;
+  margin-bottom: 1rem;
+}
+
+/* Style for Sort Select */
+#sort-select {
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #dee2e6;
+  margin-bottom: 1rem;
+}
+
+/* Style for Copy Button */
+.copy-btn {
+  cursor: pointer;
+  margin-left: 0.5rem;
+  color: #007bff;
+}
+
+/* Style for Confirmation Dialog */
+.confirm-dialog {
+  display: none;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 1rem;
+  max-width: 300px;
+  margin: 10% auto;
+  text-align: center;
+}
+
+.confirm-dialog h4 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.confirm-dialog button {
+  margin-top: 0.5rem;
+}
