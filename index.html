@@ -4,6 +4,7 @@
 <head>
     <title>Code Snippet Manager</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.11.0/dist/tf.min.js"></script>
 </head>
 
 <body>
@@ -37,6 +38,16 @@
                         id="total-pages">1</span></span>
                 <button id="pagination-next">Next &gt;</button>
             </div>
+        </div>
+        <div>
+            <h1>Neural Network Example</h1>
+            <div id="output"></div>
+
+            <script src="neural_network.js"></script>
+            <script>
+                // Call the function from neural_network.js to train and predict
+                trainAndPredict();
+            </script>
         </div>
     </main>
     <footer>
