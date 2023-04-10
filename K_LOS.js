@@ -63,3 +63,8 @@ function executeK_LOS_Algorithm() {
 
 // Execute K_LOS Algorithm
 executeK_LOS_Algorithm();
+
+// Call functions from the neural_network.js file
+const trainedModel = neuralNetwork.train();
+const predictedValue = neuralNetwork.predict(trainedModel, [0.5, 0.25, 0.1]);
+console.log(`Predicted Value: ${predictedValue}`);
