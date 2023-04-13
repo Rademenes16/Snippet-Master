@@ -4,11 +4,12 @@
 ![](https://img.shields.io/badge/coverage-100%25-success)
 ![](https://img.shields.io/badge/build-passing-success)
 ![](https://img.shields.io/badge/w3c-validated-brightgreen)
-![](https://img.shields.io/badge/version-v1.1-blue)
-![](https://img.shields.io/badge/license-MIT-green)
 ![](https://img.shields.io/github/last-commit/Rademenes16/Snippet-Master)
 ![](https://img.shields.io/github/issues/Rademenes16/Snippet-Master)
 ![](https://img.shields.io/github/issues-pr/Rademenes16/Snippet-Master)
+
+![](https://img.shields.io/badge/version-v1.1-blue)
+![](https://img.shields.io/badge/license-MIT-green)
 ![](https://img.shields.io/github/languages/code-size/Rademenes16/Snippet-Master)
 ![](https://img.shields.io/github/languages/top/Rademenes16/Snippet-Master)
 # Description:
