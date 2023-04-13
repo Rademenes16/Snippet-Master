@@ -5,7 +5,8 @@
 
 | Version | Supported          |
 | ------- | ------------------ |
-| 1   | :white_check_mark: |
+| 1.1 | ✅ |
+| 1   | ✅ (end of support - May 2023 |
 
 
 ## Finding a Vulnerability (the holy 9 points)
